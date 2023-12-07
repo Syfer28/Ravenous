@@ -1,0 +1,29 @@
+.search_container {
+    height: 400px;
+    background-image: url(./background.jpg);
+    background-size: cover;
+    margin-bottom: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search_sort ul {
+    display: flex;
+    justify-content: center;
+}
+
+.search_sort li{
+    list-style: none;
+    padding-left: 15px;
+}
+
+.search_button {
+    text-align: center;
+    width: 10%;
+    background-color: #daa646;
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+}

@@ -39,11 +39,11 @@
 
 .business_category {
     text-transform: uppercase;
-    color: goldenrod;
+    color: #daa646;
     font-weight: 700;
 }
 
 .business_rating {
-    color: goldenrod;
+    color: #daa646;
     font-weight: 700;
 }
