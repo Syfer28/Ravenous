@@ -7,23 +7,55 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .search_sort ul {
     display: flex;
     justify-content: center;
+    padding: 0 40px;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
 }
 
 .search_sort li{
+    cursor: pointer;
+    width: 80px;
     list-style: none;
-    padding-left: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    transition: color 0.1s;
+}
+
+.search_sort li:not(:last-child) {
+    margin-right: 100px;
+}
+
+.search_sort li:hover {
+    color: rgb(195, 195, 195);
+}
+
+.search_input {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.search_input input {
+    margin: 0 20px;
+    outline: none;
 }
 
 .search_button {
+    cursor: pointer;
     text-align: center;
-    width: 10%;
     background-color: #daa646;
     color: white;
+    margin-top: 0;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 1rem;
     border-style: none;
     border-radius: 3px;
 }
