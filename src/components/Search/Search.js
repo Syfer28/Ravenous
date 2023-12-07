@@ -23,7 +23,7 @@ const Search = () => {
                 {list()}
             </div>
             <div className = 'search_input'>
-                <input className = 'search_input_bussinesses'placeholder='Seacrh businesses'/>
+                <input className = 'search_input_bussinesses'placeholder='Seacrh Businesses'/>
                 <input className = 'search_input_where'placeholder='Where?'/>
             </div>
             <button className = 'search_button' type = 'submit'>Let's Go</button>
