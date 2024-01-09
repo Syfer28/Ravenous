@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Search.css'
 
 
@@ -8,11 +8,26 @@ const sortOption = {
     review: 'Most Reviewed'
 }
 
+const styles = {
+    color: '#daa646',
+    borderColor: '#daa646',
+}
+
 const Search = () => {
+    const [active, setActive] = useState(null);
+
+
+
     const list = () => {
-        const listItems = Object.values(sortOption).map((value, index) =>
-          <li key = {index}>{value}</li>
-        );
+        const listItems = Object.values(sortOption).map((value, index) => (
+            <li
+                key={index}
+                style={index === active ? styles : null}
+                onClick={() => setActive(index)}
+            >
+                {value}
+            </li>
+        ));
         return (
           <ul>{listItems}</ul>
         );
