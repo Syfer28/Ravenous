@@ -34,9 +34,14 @@
     color: rgb(195, 195, 195);
 }
 
+.search_field {
+    text-align: center;
+}
+
 .search_input {
-    display: flex;
     margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .search_input input {

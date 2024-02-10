@@ -16,14 +16,34 @@ const styles = {
 const Search = () => {
     const [active, setActive] = useState(null);
 
+    const [term, setTerm] = useState("");
+    const [location, setLocation] = useState("");
+    const [sortBy, setSortBy] = useState("best_match");
 
+    const handleTermChange = ({ target }) => {
+        setTerm(target.value);
+    }
+    const handleLocationChange = ({ target }) => {
+        setLocation(target.value);
+    }
+    const handleSortByChange = (value) => {
+        setSortBy(value);
+    }
+
+    const handleSearch = event => {
+        event.preventDefault();
+        console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`)
+    }
 
     const list = () => {
         const listItems = Object.values(sortOption).map((value, index) => (
             <li
                 key={index}
                 style={index === active ? styles : null}
-                onClick={() => setActive(index)}
+                onClick={() => {
+                    setActive(index);
+                    handleSortByChange(value);
+                }}
             >
                 {value}
             </li>
@@ -37,11 +57,13 @@ const Search = () => {
             <div className = 'search_sort'>
                 {list()}
             </div>
-            <div className = 'search_input'>
-                <input className = 'search_input_bussinesses'placeholder='Seacrh Businesses'/>
-                <input className = 'search_input_where'placeholder='Where?'/>
-            </div>
-            <button className = 'search_button' type = 'submit'>Let's Go</button>
+            <form className = 'search_field' onSubmit={handleSearch}>
+                <div className='search_input'>
+                    <input className = 'search_input_bussinesses' placeholder='Seacrh Businesses' value={term} onChange={handleTermChange} />
+                    <input className = 'search_input_where' placeholder='Where?' value={location} onChange={handleLocationChange} />
+                </div>
+                <button className = 'search_button' type = 'submit'>Let's Go</button>
+            </form>
         </div>
     )
 }

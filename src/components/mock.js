@@ -1,4 +1,4 @@
-export const mock = [
+const mock = [
     {
         imageSrc: 'https://www.realsimple.com/thmb/61ujaJ613kgBxOazzX7ldbymL88=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pizza-in-box-06ba7131a6584d0eb289d2fab1b62c88.jpg',
         name: 'Lulu Pizza',
@@ -44,3 +44,5 @@ export const mock = [
         reviewCount: 109
     }
 ]
+
+export default mock;
